@@ -1,0 +1,96 @@
+/* common */
+body,
+h1,
+p {
+    margin: 0;
+}
+
+p,
+a {
+    font-size: 20px;
+}
+
+/* header */
+.header {
+    margin-bottom: 20px;
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+
+.header h1 {
+    color: rgb(255, 255, 255);
+}
+
+/* main */
+.main {
+    margin: 10px;
+}
+
+.main #parent {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main #parent .contents {
+    flex-basis: 25%;
+    margin: 20px 0;
+    padding: 10px 15px;
+    border: solid 1px rgb(238, 204, 204);
+    text-align: center;
+}
+
+.main #parent .contents h2 {
+    border-bottom: dotted 3px rgb(236, 122, 122);
+    font-size: 25px;
+}
+
+.main #parent .contents h2::before {
+    content: '●';
+    color: rgb(239, 111, 139);
+}
+
+.main #parent .contents p:nth-of-type(2)::first-letter {
+    color: rgb(97, 206, 249);
+    font-weight: bold;
+}
+
+.main #parent .contents img {
+    width: 70%;
+    margin: 10px 0;
+}
+
+/* footer */
+.footer {
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+
+.footer a {
+    color: rgb(255, 255, 255);
+}
+
+.footer a:hover {
+    color: rgb(245, 178, 168);
+}
+
+.footer a:visited {
+    color: rgb(193, 234, 251);
+}
+
+/* responsive: max-width(768px) */
+@media screen and (max-width: 768px) {
+
+    /* main 768px */
+    .main #parent {
+        display: block;
+    }
+
+    .main #parent .contents h2 {
+        font-size: 30px;
+    }
+
+    .main #parent .contents p {
+        font-size: 25px;
+    }
+
+}
